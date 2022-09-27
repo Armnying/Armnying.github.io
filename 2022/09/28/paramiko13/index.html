@@ -20,17 +20,17 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="00实验环境 win7（虚拟机） ensp &amp; cloud CE12800 python paramiko(2.72)  1.1配置Cloud 1.2配置Ce12800用户&amp;SSH 1.3CMD测试密码登录 1.4Paramiko登录–口令认证12345678910111213import paramikoimport timessh &#x3D; paramiko.SSHClient()s">
+  <meta name="description" content="python划个vlan">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Armny">
+<meta property="og:title" content="Paramiko模块SSH密钥登录配置vlan">
 <meta property="og:url" content="http://example.com/2022/09/28/paramiko13/index.html">
 <meta property="og:site_name" content="Armny">
-<meta property="og:description" content="00实验环境 win7（虚拟机） ensp &amp; cloud CE12800 python paramiko(2.72)  1.1配置Cloud 1.2配置Ce12800用户&amp;SSH 1.3CMD测试密码登录 1.4Paramiko登录–口令认证12345678910111213import paramikoimport timessh &#x3D; paramiko.SSHClient()s">
+<meta property="og:description" content="python划个vlan">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/cloud.png">
-<meta property="og:image" content="http://example.com/img/pz1.png">
-<meta property="og:image" content="http://example.com/img/pz2.png">
-<meta property="og:image" content="http://example.com/img/cs.png">
+<meta property="og:image" content="http://example.com/images/13/cloud.png">
+<meta property="og:image" content="http://example.com/images/13/pz1.png">
+<meta property="og:image" content="http://example.com/images/13/pz2.png">
+<meta property="og:image" content="http://example.com/images/13/cs.png">
 <meta property="og:image" content="http://example.com/img/pycs.png">
 <meta property="og:image" content="http://example.com/img/mypz1.png">
 <meta property="og:image" content="http://example.com/img/mypz2.png">
@@ -38,11 +38,12 @@
 <meta property="og:image" content="http://example.com/img/sshmy.png">
 <meta property="og:image" content="http://example.com/img/vlan1.png">
 <meta property="og:image" content="http://example.com/img/vlan2.png">
-<meta property="article:published_time" content="2022-09-27T16:08:29.857Z">
-<meta property="article:modified_time" content="2022-09-24T16:59:25.929Z">
+<meta property="article:published_time" content="2022-09-27T16:47:00.000Z">
+<meta property="article:modified_time" content="2022-09-27T16:44:07.623Z">
 <meta property="article:author" content="Armny">
+<meta property="article:tag" content="作业">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/img/cloud.png">
+<meta name="twitter:image" content="http://example.com/images/13/cloud.png">
 
 <link rel="canonical" href="http://example.com/2022/09/28/paramiko13/">
 
@@ -57,7 +58,7 @@
   };
 </script>
 
-  <title> | Armny</title>
+  <title>Paramiko模块SSH密钥登录配置vlan | Armny</title>
   
 
 
@@ -190,7 +191,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          Paramiko模块SSH密钥登录配置vlan
         </h1>
 
         <div class="post-meta">
@@ -199,18 +200,22 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2022-09-28 00:08:29" itemprop="dateCreated datePublished" datetime="2022-09-28T00:08:29+08:00">2022-09-28</time>
+              <time title="创建时间：2022-09-28 00:47:00 / 修改时间：00:44:07" itemprop="dateCreated datePublished" datetime="2022-09-28T00:47:00+08:00">2022-09-28</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-25 00:59:25" itemprop="dateModified" datetime="2022-09-25T00:59:25+08:00">2022-09-25</time>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BD%91%E7%BB%9C%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">网络自动化运维</span></a>
+                </span>
+            </span>
 
           
+            <div class="post-description">python划个vlan</div>
 
         </div>
       </header>
@@ -227,9 +232,9 @@
 <li>CE12800</li>
 <li>python paramiko(2.72)</li>
 </ul>
-<h2 id="1-1配置Cloud"><a href="#1-1配置Cloud" class="headerlink" title="1.1配置Cloud"></a>1.1配置Cloud</h2><p><img src="/./img/cloud.png"></p>
-<h2 id="1-2配置Ce12800用户-amp-SSH"><a href="#1-2配置Ce12800用户-amp-SSH" class="headerlink" title="1.2配置Ce12800用户&amp;SSH"></a>1.2配置Ce12800用户&amp;SSH</h2><p><img src="/./img/pz1.png"><br><img src="/./img/pz2.png"></p>
-<h2 id="1-3CMD测试密码登录"><a href="#1-3CMD测试密码登录" class="headerlink" title="1.3CMD测试密码登录"></a>1.3CMD测试密码登录</h2><p><img src="/./img/cs.png"></p>
+<h2 id="1-1配置Cloud"><a href="#1-1配置Cloud" class="headerlink" title="1.1配置Cloud"></a>1.1配置Cloud</h2><p><img src="/images/13/cloud.png"></p>
+<h2 id="1-2配置Ce12800用户-amp-SSH"><a href="#1-2配置Ce12800用户-amp-SSH" class="headerlink" title="1.2配置Ce12800用户&amp;SSH"></a>1.2配置Ce12800用户&amp;SSH</h2><p><img src="/images/13/pz1.png"><br><img src="/images/13/pz2.png"></p>
+<h2 id="1-3CMD测试密码登录"><a href="#1-3CMD测试密码登录" class="headerlink" title="1.3CMD测试密码登录"></a>1.3CMD测试密码登录</h2><p><img src="/./images/13/cs.png"></p>
 <h2 id="1-4Paramiko登录–口令认证"><a href="#1-4Paramiko登录–口令认证" class="headerlink" title="1.4Paramiko登录–口令认证"></a>1.4Paramiko登录–口令认证</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> paramiko</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line">ssh = paramiko.SSHClient()</span><br><span class="line">ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())</span><br><span class="line">ssh.connect(hostname=<span class="string">&#x27;192.168.56.100&#x27;</span>,port=<span class="number">22</span>,username=<span class="string">&#x27;python&#x27;</span>,password=<span class="string">&#x27;Huawei12#$&#x27;</span>) </span><br><span class="line">cli = ssh.invoke_shell()</span><br><span class="line">cli.send(<span class="string">&#x27;n\n&#x27;</span>)</span><br><span class="line">cli.send(<span class="string">&#x27;screen-length 0 temporary\n&#x27;</span>)</span><br><span class="line">cli.send(<span class="string">&#x27;display cu\n&#x27;</span>)</span><br><span class="line">time.sleep(<span class="number">3</span>)</span><br><span class="line">dis_cu = cli.recv(<span class="number">999999</span>).decode()</span><br><span class="line"><span class="built_in">print</span>(dis_cu)</span><br><span class="line">ssh.close()</span><br></pre></td></tr></table></figure>
 <h3 id="效果如下"><a href="#效果如下" class="headerlink" title="效果如下:"></a>效果如下:</h3><p><img src="/./img/pycs.png"></p>
 <h2 id="2-1配置Ce12800-SSH密钥"><a href="#2-1配置Ce12800-SSH密钥" class="headerlink" title="2.1配置Ce12800 SSH密钥"></a>2.1配置Ce12800 SSH密钥</h2><p><img src="/./img/mypz1.png"><br><img src="/./img/mypz2.png"></p>
@@ -248,6 +253,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%BD%9C%E4%B8%9A/" rel="tag"># 作业</a>
+          </div>
 
         
 
@@ -255,13 +263,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/09/19/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" rel="prev" title="Markdown常用语法">
-      <i class="fa fa-chevron-left"></i> Markdown常用语法
+    <a href="/2022/09/28/paramiko%E6%A8%A1%E5%9D%97%E5%AF%86%E9%92%A5%E7%99%BB%E5%BD%95%E9%85%8D%E7%BD%AEvlan/" rel="prev" title="paramiko模块密钥登录配置vlan">
+      <i class="fa fa-chevron-left"></i> paramiko模块密钥登录配置vlan
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/09/28/paramiko14/" rel="next" title="">
-       <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -343,13 +348,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
